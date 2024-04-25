@@ -1,0 +1,39 @@
+/*
+        Ejercicio 1
+            Conversor de Celsius a Fahrenheit.
+    [] Crear variables float para guardar grados celsius y fahrenheit.
+    [] Avisar y guardar en la variable de celsius los grados dados por el usuario.
+    [] Guardar en la variable fahrenheit el calculo de: celsius * (9 / 5) + 32.
+    [] Mostrar al usuario.
+*/
+
+/*
+        Ejercicio 2
+            Determinar si un número es primo.
+    [] Crear variable para que el usuario el numero.
+    [] Avisar y guardar el usuario para la variable de numero.
+    [] Preguntar con una condición que pregunte si el número es primo o no.
+        Si - Avisar al usuario que es primo.
+        No - Avisar al usuario que no es primo.
+*/
+
+/*
+        Ejercicio 3
+            Conteo regresivo
+    [] Crear variable para guardar el número.
+    [] Avisar y guardar en la variable el número en la variable numero.
+    [] Mostrar cada número con un for que vaya desde el número dado por el usuario hasta 0
+        mostrando el número del iterador.
+*/
+
+/*
+        Ejercicio 4
+            Sumar números hasta un límite.
+    [] Crear variable para guardar el número y la suma total.
+    [] Avisar y guardar en la variable el número dado por el usuario. (avisando que tiene que ser mayor a 0).
+    [] Preguntar si el número es mayor a 0.
+        Si - No hacer nada.
+        No - Avisar al usuario que el número tiene que ser mayor y terminar el programa.
+    [] En un for iterar desde el 0 hasta el número dado por el usuario. Sumando cada número de iteración a la variable que guarda la suma total.
+    [] Mostrar al usuario la suma total.
+*/

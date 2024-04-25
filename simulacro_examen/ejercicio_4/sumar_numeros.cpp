@@ -24,14 +24,14 @@ int main(){
 
     if(userNum <= 0){
         cout << "El numero ingresado es menor o igual a 0.";
-        exit(0);
+        exit(1);
     }
 
     for(int i = 0 ; i <= userNum ; i++){
         sumTotal += i;
     }
 
-    cout << "La suma total de todos los numeros desde el 0 hasta " << userNum << " es de: " << sumTotal;
+    cout << "La suma total de todos los numeros desde el 0 hasta el " << userNum << " es de: " << sumTotal;
 
     return 0;
 }

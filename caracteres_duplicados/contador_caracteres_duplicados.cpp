@@ -12,18 +12,18 @@ using namespace std;
 
 /*
     algoritmo
-    [] Variable que guarda la cantidad de caracteres que se repiten.
-    [] Variable con la cadena de caracteres que vamos a analizar (como un array de characteres, no como un string).
-    [] Averiguar el largo de esta cadena de caracteres y guardarlo en una variable.
-    [] Crear nueva cadena de caracteres, para guardar los caracteres duplicados ya contados.
+    [*] Variable que guarda la cantidad de caracteres que se repiten.
+    [*] Variable con la cadena de caracteres que vamos a analizar (como un array de characteres, no como un string).
+    [*] Averiguar el largo de esta cadena de caracteres y guardarlo en una variable.
+    [*] Crear nueva cadena de caracteres, para guardar los caracteres duplicados ya contados.
 
-    [] Crear función para buscar un caracter dentro de una cadena de caracteres, ambos pasados como parámetros. Retorna True o False.
+    [*] Crear función para buscar un caracter dentro de una cadena de caracteres, ambos pasados como parámetros. Retorna True o False.
         Dentro de la función
-        [] Averiguar el largo de la cadena pasada en el parametro.
-        [] Iterar la cadena dada como parámetro, preguntando en cada iteración si el caracter de la cadena es igual al caracter
+        [*] Averiguar el largo de la cadena pasada en el parametro.
+        [*] Iterar la cadena dada como parámetro, preguntando en cada iteración si el caracter de la cadena es igual al caracter
             dado como parámetro.
                 si - Retornar true
-        [] Retornar false en caso de salir de la iteración. (el caracter buscado no existe en la cadena de caracteres dada)
+        [*] Retornar false en caso de salir de la iteración. (el caracter buscado no existe en la cadena de caracteres dada)
 
     [] Iterar la cadena de caracteres original(sin llegar al último elemento).
         dentro del for
@@ -43,7 +43,28 @@ using namespace std;
     ya que cada caracter ocupa 1 bite, el otro bite desconozco de donde sale.
 */
 
+// función que buscara un caracter dentro de un string.
+// parámetros: 1- caracter, 2- string.
+// retorna: true si existe, false si no.
+bool encontrarCaracter(char caracter, string duplicadosString){
+    int largo = duplicadosString.length();
+
+    for(int i = 0; i < largo; i++){
+        if(caracter == duplicadosString[i]){
+            return true;
+        }
+    }
+    return false;
+}
+
 int main (){
+
+    int cantDuplicados = 0;
+
+    char cadena[] = "EaAbbBcde";
+    int largoCadena = sizeof(cadena) - 1;
+
+    string  duplicadosContados = "";
 
     return 0;
 

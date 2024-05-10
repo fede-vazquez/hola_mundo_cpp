@@ -25,17 +25,17 @@ using namespace std;
                 si - Retornar true
         [*] Retornar false en caso de salir de la iteración. (el caracter buscado no existe en la cadena de caracteres dada)
 
-    [] Iterar la cadena de caracteres original(sin llegar al último elemento).
+    [*] Iterar la cadena de caracteres original(sin llegar al último elemento).
         dentro del for
-        [] Convertir el caracter a minúscula con la ayuda de (char) tolower(caracter) y guardarlo en una variable.
-        [] Iterar nuevamente la cadena, desde el número de iteración hasta el final.
-            [] Convertir, y guardar en una variable, el caracter de esta segunda iteración en minúscula también.
-            [] Preguntar si estos caracteres son iguales.
+        [*] Convertir el caracter a minúscula con la ayuda de (char) tolower(caracter) y guardarlo en una variable.
+        [*] Iterar nuevamente la cadena, desde el número de iteración + 1 hasta el final.
+            [*] Convertir, y guardar en una variable, el caracter de esta segunda iteración en minúscula también.
+            [*] Preguntar si estos caracteres son iguales.
                 Si - Preguntar si dicho caracter NO existe en la cadena de caracteres duplicados ya contados.
                     Si - Agregar dicho caracter a la cadena de caracteres
                          y sumar 1 a la variable que guarda la cantidad de caracteres repetidos.
 
-    [] Informarle al usuario la cantidad de caracteres que se repiten.
+    [*] Informarle al usuario la cantidad de caracteres que se repiten.
 
     Datos a tener en cuenta:
     Para saber el largo de una cadena de caracteres, hay que utilizar sizeof(texto) - 1.
@@ -48,6 +48,8 @@ using namespace std;
 // retorna: true si existe, false si no.
 bool encontrarCaracter(char caracter, string duplicadosString){
     int largo = duplicadosString.length();
+
+    // cout << "se activo" << endl;
 
     for(int i = 0; i < largo; i++){
         if(caracter == duplicadosString[i]){
@@ -65,6 +67,28 @@ int main (){
     int largoCadena = sizeof(cadena) - 1;
 
     string  duplicadosContados = "";
+
+
+
+    for(int i = 0; i < largoCadena - 1; i++){
+        char caracterMinuscula = (char)tolower(cadena[i]);
+
+
+        for(int j = i+1; j < largoCadena; j++){
+            char segundaMinuscula = (char)tolower(cadena[j]);
+
+            // cout << caracterMinuscula << " || " << segundaMinuscula << endl;
+
+            if(caracterMinuscula == segundaMinuscula){
+                if(!encontrarCaracter(caracterMinuscula, duplicadosContados)){
+                    duplicadosContados.push_back(segundaMinuscula);
+                    cantDuplicados += 1;
+                }
+                break;
+            }
+        }
+    }
+    cout << "Cantidad de caracteres duplicados: " << cantDuplicados;
 
     return 0;
 

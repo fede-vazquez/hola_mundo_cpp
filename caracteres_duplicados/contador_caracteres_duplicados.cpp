@@ -38,7 +38,7 @@ using namespace std;
     [*] Informarle al usuario la cantidad de caracteres que se repiten.
 
     Datos a tener en cuenta:
-    Para saber el largo de una cadena de caracteres, hay que utilizar sizeof(texto) - 1.
+    Para saber el largo de una cadena de caracteres, hay que utilizar sizeof(cadena) - 1.
     Ya que al utilizar la función sizeof con una cadena de caracteres, esta devuelve (cantidad de caracteres + 1),
     ya que cada caracter ocupa 1 bite, el otro bite desconozco de donde sale.
 */
@@ -49,7 +49,7 @@ using namespace std;
 bool encontrarCaracter(char caracter, string duplicadosString){
     int largo = duplicadosString.length();
 
-    // cout << "se activo" << endl;
+    //cout << "se activo" << endl;
 
     for(int i = 0; i < largo; i++){
         if(caracter == duplicadosString[i]){
@@ -58,6 +58,9 @@ bool encontrarCaracter(char caracter, string duplicadosString){
     }
     return false;
 }
+
+// esta solución utiliza el tipo string para la variable duplicadosContados,
+// porque no encontré la forma de agregar un elemento a una cadena de caracteres.
 
 int main (){
 
@@ -77,13 +80,20 @@ int main (){
         for(int j = i+1; j < largoCadena; j++){
             char segundaMinuscula = (char)tolower(cadena[j]);
 
-            // cout << caracterMinuscula << " || " << segundaMinuscula << endl;
+            //cout << caracterMinuscula << " || " << segundaMinuscula << endl;
 
             if(caracterMinuscula == segundaMinuscula){
                 if(!encontrarCaracter(caracterMinuscula, duplicadosContados)){
                     duplicadosContados.push_back(segundaMinuscula);
                     cantDuplicados += 1;
+                    //cout << "Se suma" << endl;
                 }
+                /*
+                else {
+                    cout << "Sumado anteriormente" << endl;
+                }
+                */
+
                 break;
             }
         }

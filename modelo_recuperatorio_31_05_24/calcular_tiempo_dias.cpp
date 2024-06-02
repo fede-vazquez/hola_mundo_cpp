@@ -17,7 +17,7 @@ using namespace std;
         no - avisarle al usuario que el número de días tiene que ser mayor a 0
         si - seguir con el código
     [*] Crear variables horas, minutos, segundos. Y guardar los cálculos por cada una.
-    [] Mostrarle al usuario la información de cara variable.
+    [*] Mostrarle al usuario la información de cara variable.
 */
 
 int main(){

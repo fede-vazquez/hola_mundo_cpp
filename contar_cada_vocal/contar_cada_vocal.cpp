@@ -15,6 +15,15 @@ int main(){
 
         char caracterMinuscula = tolower(texto[contador]);
 
+        /*
+        for(int i = 0; i < 5; i++){
+            if(caracterMinuscula == vocales[i]){
+                cantVeces[i]++;
+                break;
+            }
+        }
+        */
+
         switch(caracterMinuscula){
             case 'a':
                 cantVeces[0]++;

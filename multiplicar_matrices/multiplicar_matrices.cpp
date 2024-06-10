@@ -13,6 +13,8 @@ int main(){
     cout << "Ingresa el numero de columnas de la matriz 1: ";
     cin >> columnas1;
 
+    cout << endl;
+
     int filas2 = 0;
     int columnas2 = 0;
     cout << "Ingresa el numero de filas de la matriz 2: ";
@@ -20,29 +22,32 @@ int main(){
     cout << "Ingresa el numero de columnas de la matriz 2: ";
     cin >> columnas2;
 
+    cout << endl;
 
     // Preguntar si es posible hacer la multiplicación.
     if(columnas1 != filas2){
         // no - Avisarle al usuario que no es posible multiplicarlas y terminar el programa.
-        cout << "Las matrices no se pueden multiplicar, ya que la cantidad de columnas de la matriz 1 no es igual a la cantidad de columnas de la matriz 2.";
+        cout << "Las matrices no se pueden multiplicar, ya que la cantidad de columnas de la matriz 1 no es igual a la cantidad de filas de la matriz 2.";
         exit(1);
     }
 
 
     // Crear matrices 1 y 2, y la matriz que será el resultado de la multiplicación.
-    // El orden de la matriz resultado será el número de filas de la matriz 1 y el número de columnas de la matriz 2.
     int matriz1[filas1][columnas1];
     int matriz2[filas2][columnas2];
-
+    // El orden de la matriz resultado será el número de filas de la matriz 1 y el número de columnas de la matriz 2.
     int multiplicacion[filas1][columnas2];
 
-    // Llenar cada una de las matrices con los datos dados por el usuario. Informando la matriz y el elemento que esta llenando.
+    // Llenar las matrices 1 y 2 con los datos dados por el usuario. Informando la matriz y el elemento que esta llenando.
+    cout << "Ingrese los datos de la matriz 1:" << endl;
     for(int i = 0; i < filas1; i++){
         for(int j = 0; j < columnas1; j++){
             cout << "Valor del elemento matriz 1[" << i << "][" << j << "]: ";
             cin >> matriz1[i][j];
         }
     }
+    cout << endl;
+    cout << "Ingrese los datos de la matriz 2:" << endl;
     for(int i = 0; i < filas2; i++){
         for(int j = 0; j < columnas2; j++){
             cout << "Valor del elemento matriz 2[" << i << "][" << j << "]: ";
@@ -66,13 +71,13 @@ int main(){
     }
 
     // Mostrar la matriz con el resultado de la multiplicación.
+    cout << endl << "La matriz resultante de la multiplicacion de las matrices es:" << endl;
     for(int i = 0; i < filas1; i++){
         for(int j = 0; j < columnas2; j++){
-            cout << multiplicacion[i][j] << " ";
+            cout << " " << multiplicacion[i][j];
         }
         cout << endl;
     }
-
 
     return 0;
 }

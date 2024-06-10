@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 
-    // Pedirle al usuario el número de filas y de columnas y guardarlas. (camino feliz, el el usuario no pondrá menos de 1)
+    // Pedirle al usuario el número de filas y de columnas y guardarlas. (camino feliz, el usuario no pondrá menos de 1)
     int filas = 0;
     int columnas = 0;
     cout << "Ingresa el numero de filas: ";
